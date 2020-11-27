@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    
+    /* sort form for the above three */
+    /* font: 15px/1.5 Arial, Helvetica, sans-serif; */
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+}
+
+/* GLOBAL */
+.container {
+    width: 80%;
+    margin: auto;
+    
+    /* hide scrollbar if something goes out of div*/
+    overflow: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button-1 {
+    height: 38px;
+    background-color: orangered;
+    border: none;
+    padding: 0 20px;
+    color: white;
+}
+
+.dark {
+    padding: 15px;
+    background-color: #35424a;
+    color: white;
+
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    margin:10px 0 ;
+}
+
+/* HEADER */
+header {
+    background-color: #35424a;
+    color:white;
+    padding-top: 20px;
+    
+    /* to adjust with the smaller screen */
+    min-height: 70px;
+    border-bottom: orangered solid 3px;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: orangered;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: grey;
+    font-weight: bold;
+}
+
+/* SHOWCASE */
+#showcase {
+    min-height: 400px;
+    
+    /* 1st parameter - img dir
+       2nd parameter - avoid img repeat
+       3rd parameter - adjust the image position */
+    background: url('../img/showcase.jpg') no-repeat 0 -400px;
+    text-align: center;
+    color: white;
+}
+
+#showcase h1 {
+     margin-top: 100px;
+     font-size: 55px;
+     margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* NEWSLETTER */
+#newsletter {
+    padding: 15px;
+    color: white;
+    background-color: #35424a;
+}
+
+#newsletter h1 {
+    float: left;
+}
+#newsletter form {
+    float: right;
+    margin-top: 25px;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* BOXES */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    /* we need width for the float to work */
+    float: left;
+    width: 30%;
+
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#boxex .box img {
+    width: 90px;
+}
+
+/* SIDEBAR */
+aside#sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;
+}
+
+/* MAIN-COL */
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+/* SERVICES */
+ul#services li{
+    list-style: none;
+    padding: 20px;
+    border: solid 1px grey;
+    margin-bottom: 5px;
+    background-color: rgb(170, 168, 168);
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color:white;
+    background-color: orangered;
+    text-align: center;
+}
+
+/* MEDIA QUIRIES */
+
+/* any css code will only be effictive when the screen at the size of 768px */
+@media(max-width: 768px) {
+    
+    /* fixing all float for smaller screen */
+    header#branding, 
+    header nav, 
+    header nav li, 
+    #newsletter h1, 
+    #newsletter form, 
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    
+    header {
+        padding-bottom: 20px;
+    }
+    
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    
+    #newsletter button, .quote button {
+        display: block;
+        width: 100%;
+    }
+    
+    #newsletter form input[type="email"], .quote input, .quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
